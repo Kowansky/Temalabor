@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.example.footballmodel/src" modelPluginID="org.eclipse.example.footballmodel"
+    modelName="Football" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>football.ecore</foreignModel>
+  <genPackages prefix="Football" disposableProviderFactory="true" ecorePackage="football.ecore#/">
+    <genClasses ecoreClass="football.ecore#//Country">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Country/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference football.ecore#//Country/champions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference football.ecore#//Country/cups"/>
+    </genClasses>
+    <genClasses ecoreClass="football.ecore#//Championship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Championship/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference football.ecore#//Championship/teams"/>
+    </genClasses>
+    <genClasses ecoreClass="football.ecore#//Cup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Cup/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference football.ecore#//Cup/teams"/>
+    </genClasses>
+    <genClasses ecoreClass="football.ecore#//Team">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Team/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Team/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Team/manager"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Team/stadiumName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference football.ecore#//Team/players"/>
+    </genClasses>
+    <genClasses ecoreClass="football.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Player/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Player/dateOfBirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Player/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute football.ecore#//Player/position"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

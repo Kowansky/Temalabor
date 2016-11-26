@@ -43,14 +43,6 @@
               </iterator>
             </body>
             <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
-            <body xsi:type="mtl:ForBlock">
-              <iterSet xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-              </iterSet>
-              <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              </each>
-            </body>
             <iterSet xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
             </iterSet>
@@ -200,21 +192,6 @@
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="i">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="i">
@@ -237,12 +214,12 @@
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateElement">
       <details key="start" value="229"/>
-      <details key="end" value="754"/>
+      <details key="end" value="720"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateElement/%">
       <details key="start" value="310"/>
-      <details key="end" value="742"/>
+      <details key="end" value="708"/>
       <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateElement/%/%">
@@ -257,7 +234,7 @@
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateElement/%/%.2">
       <details key="start" value="384"/>
-      <details key="end" value="674"/>
+      <details key="end" value="640"/>
       <details key="line" value="18"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateElement/%/%.2/%">
@@ -287,7 +264,7 @@
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateElement/%/%.2/%.4">
       <details key="start" value="543"/>
-      <details key="end" value="639"/>
+      <details key="end" value="605"/>
       <details key="line" value="25"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/generateElement/%/%.2/%.4/%">
@@ -331,76 +308,61 @@
       <details key="line" value="27"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/generateElement/%/%.2/%.4/%.2">
-      <details key="start" value="599"/>
-      <details key="end" value="631"/>
-      <details key="line" value="27"/>
-    </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/generateElement/%/%.2/%.4/%.2/%">
-      <details key="start" value="604"/>
-      <details key="end" value="605"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/generateElement/%/%.2/%.4/%.2/%.1">
-      <details key="start" value="617"/>
-      <details key="end" value="621"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generateElement/%/%.2/%.4/%.3">
       <details key="start" value="549"/>
       <details key="end" value="550"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generateElement/%/%.2/%.4/%.4">
+    <eAnnotations source="positions.21" references="/0/generateElement/%/%.2/%.4/%.3">
       <details key="start" value="562"/>
       <details key="end" value="566"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/generateElement/%/%.2/%.5">
+    <eAnnotations source="positions.22" references="/0/generateElement/%/%.2/%.5">
       <details key="start" value="390"/>
       <details key="end" value="408"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/generateElement/%/%.2/%.5/aChampionship">
+    <eAnnotations source="positions.23" references="/0/generateElement/%/%.2/%.5/aChampionship">
       <details key="start" value="390"/>
       <details key="end" value="403"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/generateElement/%/%.2/%.6">
+    <eAnnotations source="positions.24" references="/0/generateElement/%/%.2/%.6">
       <details key="start" value="420"/>
       <details key="end" value="424"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generateElement/%/%.3">
-      <details key="start" value="708"/>
-      <details key="end" value="709"/>
-      <details key="line" value="33"/>
+    <eAnnotations source="positions.25" references="/0/generateElement/%/%.3">
+      <details key="start" value="674"/>
+      <details key="end" value="675"/>
+      <details key="line" value="31"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generateElement/%/%.4">
+    <eAnnotations source="positions.26" references="/0/generateElement/%/%.4">
       <details key="start" value="317"/>
       <details key="end" value="335"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generateElement/%/%.4/aChampionship">
+    <eAnnotations source="positions.27" references="/0/generateElement/%/%.4/aChampionship">
       <details key="start" value="317"/>
       <details key="end" value="330"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generateElement/%/%.5">
+    <eAnnotations source="positions.28" references="/0/generateElement/%/%.5">
       <details key="start" value="344"/>
       <details key="end" value="351"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/generateElement/%.1">
+    <eAnnotations source="positions.29" references="/0/generateElement/%.1">
       <details key="start" value="142"/>
       <details key="end" value="228"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/generateElement/%.1/aChampionship">
+    <eAnnotations source="positions.30" references="/0/generateElement/%.1/aChampionship">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/generateElement/aChampionship">
+    <eAnnotations source="positions.31" references="/0/generateElement/aChampionship">
       <details key="start" value="262"/>
       <details key="end" value="290"/>
       <details key="line" value="12"/>

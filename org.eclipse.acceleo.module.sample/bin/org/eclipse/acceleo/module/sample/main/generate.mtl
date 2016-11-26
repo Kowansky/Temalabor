@@ -24,8 +24,6 @@ Bajnoksag Neve:
 	Csapatok:
 	[for (1) separator('\n')]
 	[aChampionship.teams.name/]
-	[for(0) separator('\n')]
-	[/for]
 	[/for]
 	[comment \end{Csapatok:}/]
 [/for]

@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-
+import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 import org.eclipse.emf.ecore.util.Diagnostician;
@@ -40,6 +40,8 @@ public class FootballExample {
 	public static void main(String[] args) {
 		// Create a resource set to hold the resources.
 		//
+		
+		
 		ResourceSet resourceSet = new ResourceSetImpl();
 		
 		// Register the appropriate resource factory to handle all file extensions.
@@ -53,6 +55,19 @@ public class FootballExample {
 		resourceSet.getPackageRegistry().put
 			(FootballPackage.eNS_URI, 
 			 FootballPackage.eINSTANCE);
+		
+		/*ResourceSet resourceSet = new ResourceSetImpl();
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
+						.put("binary", new Resource.Factory() {
+							@Override
+							public Resource createResource(URI uri) {
+								return new BinaryResourceImpl(uri);
+							}
+						});
+		resourceSet.getPackageRegistry().put
+		(FootballPackage.eNS_URI, 
+		 FootballPackage.eINSTANCE);*/
+	
         
 		// If there are no arguments, emit an appropriate usage message.
 		//

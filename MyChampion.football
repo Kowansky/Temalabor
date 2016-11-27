@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.example.football:Country xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.eclipse.example.football="http://org/eclipse/example/football" name="Spanyolország">
+  <champions name="LaLiga">
+    <teams name="Barcelona" city="Barcelona" manager="Luis Enrique" stadiumName="Nou Camp">
+      <players name="Lionel Messi" dateOfBirth="1987-06-24T00:00:00.000+0200" height="170.0" position="ST"/>
+      <players name="Neymar" dateOfBirth="1992-02-05T00:00:00.000+0100" height="174.0" position="ST"/>
+    </teams>
+    <teams name="Real Madrid" city="Madrid" manager="Zinédine Zidane" stadiumName="Santiago Bernabéu">
+      <players name="Cristiano Ronaldo" dateOfBirth="1985-02-05T00:00:00.000+0100" height="185.0" position="ST"/>
+      <players name="Garet Bale" dateOfBirth="1989-07-16T00:00:00.000+0200" height="183.0" position="ST"/>
+    </teams>
+  </champions>
+  <champions name="Laliga2">
+    <teams name="Zaragoza" city="Zaragoza" manager="Raül Agné" stadiumName="La Romareda">
+      <players name="Cani" dateOfBirth="1981-08-03T00:00:00.000+0200" height="180.0" position="ST"/>
+      <players name="Pombo" dateOfBirth="1987-05-15T00:00:00.000+0200" height="179.0" position="ST"/>
+    </teams>
+    <teams name="Almeria" city="Almeria" manager="Fernando Soriano" stadiumName="Estadio de los Juegos Mediterráneos">
+      <players name="Enrique González Casín" dateOfBirth="1990-05-16T00:00:00.000+0200" height="175.0" position="ST"/>
+      <players name="Puertas" dateOfBirth="1987-06-24T00:00:00.000+0200" height="170.0" position="ST"/>
+    </teams>
+  </champions>
+  <cups name="Spanyol Szuperkupa"/>
+</org.eclipse.example.football:Country>

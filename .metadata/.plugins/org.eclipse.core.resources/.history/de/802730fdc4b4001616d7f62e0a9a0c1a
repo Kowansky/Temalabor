@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://org/eclipse/example/football')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aChampionship
+ */]
+[template public generateElement(aChampionship : Championship)]
+[comment @main/]
+[file (aChampionship.name, false, 'UTF-8')]
+
+[comment \begin{document}/]
+
+[for (aChampionship.name) separator('\n')]
+[/for]
+
+[/file]
+[/template]
+

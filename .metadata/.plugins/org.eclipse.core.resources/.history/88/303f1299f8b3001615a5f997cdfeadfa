@@ -1,0 +1,35 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://org/eclipse/example/football')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aChampionship
+ */]
+[template public generateElement(aChampionship : Championship)]
+[comment @main/]
+[file (aChampionship.name, true, 'UTF-8')]
+
+[comment \begin{document}/]
+
+[for (aChampionship.name) separator('\n')]
+[comment \begin{Bajnokság Neve:}/]
+Bajnoksag Neve:
+[aChampionship.name/]
+
+	[comment \begin{Csapatok:}/]
+	Csapatok:
+	[for (1) separator('\n')]
+	[aChampionship.teams.name/]
+	[/for]
+	[comment \end{Csapatok:}/]
+[/for]
+[comment \end{Bajnokság Neve:}/]
+
+[comment \end{document}/]
+[/file]
+[/template]
+

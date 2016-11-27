@@ -21,11 +21,11 @@
 <tr>
 <td>[aChampionship.name/]</td>
 <td></td>
-[for (aChampionship.teams) separator('\n')]
 </tr>
+[for (aTeam: Team | aChampionship.teams)]
 <tr>
 <td></td>
-<td>[aChampionship.teams.name/]</td>
+<td>[aTeam.name/]</td>
 </tr>
 [/for]
 </tr>
@@ -33,4 +33,3 @@
 
 [/file]
 [/template]
-

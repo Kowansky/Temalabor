@@ -13,23 +13,24 @@
 [comment @main/]
 [file (aChampionship.name, false, 'UTF-8')]
 
-[comment \begin{document}/]
-
-[for (aChampionship.name) separator('\n')]
-[comment \begin{Bajnokság Neve:}/]
-Bajnoksag Neve:
-[aChampionship.name/]
-
-	[comment \begin{Csapatok:}/]
-	Csapatok:
-	[for (1) separator('\n')]
-	[aChampionship.teams.name/]
-	[/for]
-	[comment \end{Csapatok:}/]
+<table border="1">
+<tr>
+<td>Bajnoksag</td>
+<td>Csapatok</td>
+</tr>
+<tr>
+<td>[aChampionship.name/]</td>
+<td></td>
+[for (aChampionship.teams) separator('\n')]
+</tr>
+<tr>
+<td></td>
+<td>[aChampionship.teams.name/]</td>
+</tr>
 [/for]
-[comment \end{Bajnokság Neve:}/]
+</tr>
+</table>
 
-[comment \end{document}/]
 [/file]
 [/template]
 

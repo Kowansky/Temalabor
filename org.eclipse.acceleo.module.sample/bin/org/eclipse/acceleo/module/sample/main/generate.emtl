@@ -9,59 +9,47 @@
     </input>
     <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;table border=&quot;1&quot;>&#xA;&lt;tr>&#xA;&lt;td>Bajnoksag&lt;/td>&#xA;&lt;td>Csapatok&lt;/td>&#xA;&lt;/tr>&#xA;&lt;tr>&#xA;&lt;td>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aChampionship" referredVariable="/0/generateElement/aChampionship">
+            <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://org/eclipse/example/football#//Championship/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/td>&#xA;&lt;td>&lt;/td>&#xA;"/>
         <body xsi:type="mtl:ForBlock">
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Bajnoksag Neve:&#xA;"/>
-          <body xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aChampionship" referredVariable="/0/generateElement/aChampionship">
-              <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
-            </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://org/eclipse/example/football#//Championship/name"/>
-          </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;Csapatok:&#xA;"/>
-          <body xsi:type="mtl:ForBlock">
-            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
-            <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/15/Sequence(String)">
-              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/15/OrderedSet(Team)">
-                <source xsi:type="ocl.ecore:VariableExp" name="aChampionship" referredVariable="/0/generateElement/aChampionship">
-                  <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
-                </source>
-                <referredProperty xsi:type="ecore:EReference" href="http://org/eclipse/example/football#//Championship/teams"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/tr>&#xA;&lt;tr>&#xA;&lt;td>&lt;/td>&#xA;&lt;td>"/>
+          <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/9/Sequence(String)">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Team)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aChampionship" referredVariable="/0/generateElement/aChampionship">
+                <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
               </source>
-              <body xsi:type="ocl.ecore:PropertyCallExp">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/%/%.2/%.4/collect/temp1">
-                  <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Team"/>
-                </source>
-                <referredProperty xsi:type="ecore:EAttribute" href="http://org/eclipse/example/football#//Team/name"/>
-              </body>
-              <iterator xsi:type="ocl.ecore:Variable" name="temp1">
-                <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Team"/>
-              </iterator>
-            </body>
-            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
-            <iterSet xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
-              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-            </iterSet>
-            <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;">
+              <referredProperty xsi:type="ecore:EReference" href="http://org/eclipse/example/football#//Championship/teams"/>
+            </source>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            </each>
+              <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/%/%.3/collect/temp1">
+                <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Team"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://org/eclipse/example/football#//Team/name"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+              <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Team"/>
+            </iterator>
           </body>
-          <iterSet xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/td>&#xA;&lt;/tr>&#xA;"/>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Team)">
             <source xsi:type="ocl.ecore:VariableExp" name="aChampionship" referredVariable="/0/generateElement/aChampionship">
               <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
             </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://org/eclipse/example/football#//Championship/name"/>
+            <referredProperty xsi:type="ecore:EReference" href="http://org/eclipse/example/football#//Championship/teams"/>
           </iterSet>
           <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </each>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/tr>&#xA;&lt;/table>&#xA;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aChampionship" referredVariable="/0/generateElement/aChampionship">
@@ -162,24 +150,6 @@
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
   </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-  </ocl.ecore:Variable>
   <ecore:EPackage name="collections">
     <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Team)" instanceClassName="java.util.LinkedHashSet">
       <elementType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Team"/>
@@ -189,13 +159,16 @@
     </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+    <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
   </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="i">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Team"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Team"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://org/eclipse/example/football#//Championship"/>
@@ -214,155 +187,125 @@
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateElement">
       <details key="start" value="229"/>
-      <details key="end" value="720"/>
+      <details key="end" value="618"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateElement/%">
       <details key="start" value="310"/>
-      <details key="end" value="708"/>
+      <details key="end" value="606"/>
       <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateElement/%/%">
       <details key="start" value="354"/>
-      <details key="end" value="355"/>
+      <details key="end" value="431"/>
       <details key="line" value="15"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateElement/%/%.1">
-      <details key="start" value="383"/>
-      <details key="end" value="384"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateElement/%/%.2">
-      <details key="start" value="384"/>
-      <details key="end" value="640"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateElement/%/%.2/%">
-      <details key="start" value="462"/>
-      <details key="end" value="478"/>
-      <details key="line" value="20"/>
-    </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/generateElement/%/%.2/%.1">
-      <details key="start" value="479"/>
-      <details key="end" value="497"/>
+      <details key="start" value="432"/>
+      <details key="end" value="450"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generateElement/%/%.2/%.1/aChampionship">
-      <details key="start" value="479"/>
-      <details key="end" value="492"/>
+    <eAnnotations source="positions.5" references="/0/generateElement/%/%.1/aChampionship">
+      <details key="start" value="432"/>
+      <details key="end" value="445"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generateElement/%/%.2/%.2">
-      <details key="start" value="499"/>
-      <details key="end" value="501"/>
+    <eAnnotations source="positions.6" references="/0/generateElement/%/%.2">
+      <details key="start" value="452"/>
+      <details key="end" value="468"/>
       <details key="line" value="22"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generateElement/%/%.2/%.3">
-      <details key="start" value="531"/>
-      <details key="end" value="542"/>
+    <eAnnotations source="positions.7" references="/0/generateElement/%/%.3">
+      <details key="start" value="468"/>
+      <details key="end" value="582"/>
       <details key="line" value="24"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generateElement/%/%.2/%.4">
-      <details key="start" value="543"/>
-      <details key="end" value="605"/>
+    <eAnnotations source="positions.8" references="/0/generateElement/%/%.3/%">
+      <details key="start" value="512"/>
+      <details key="end" value="537"/>
       <details key="line" value="25"/>
     </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generateElement/%/%.2/%.4/%">
-      <details key="start" value="569"/>
-      <details key="end" value="570"/>
-      <details key="line" value="26"/>
-    </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generateElement/%/%.2/%.4/collect">
-      <details key="start" value="571"/>
-      <details key="end" value="595"/>
+    <eAnnotations source="positions.9" references="/0/generateElement/%/%.3/collect">
+      <details key="start" value="538"/>
+      <details key="end" value="562"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generateElement/%/%.2/%.4/collect/%">
-      <details key="start" value="571"/>
-      <details key="end" value="590"/>
+    <eAnnotations source="positions.10" references="/0/generateElement/%/%.3/collect/%">
+      <details key="start" value="538"/>
+      <details key="end" value="557"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/generateElement/%/%.2/%.4/collect/%/aChampionship">
-      <details key="start" value="571"/>
-      <details key="end" value="584"/>
+    <eAnnotations source="positions.11" references="/0/generateElement/%/%.3/collect/%/aChampionship">
+      <details key="start" value="538"/>
+      <details key="end" value="551"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/generateElement/%/%.2/%.4/collect/%.1">
-      <details key="start" value="591"/>
-      <details key="end" value="595"/>
+    <eAnnotations source="positions.12" references="/0/generateElement/%/%.3/collect/%.1">
+      <details key="start" value="558"/>
+      <details key="end" value="562"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/generateElement/%/%.2/%.4/collect/%.1/temp1">
+    <eAnnotations source="positions.13" references="/0/generateElement/%/%.3/collect/%.1/temp1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/generateElement/%/%.2/%.4/collect/temp1">
+    <eAnnotations source="positions.14" references="/0/generateElement/%/%.3/collect/temp1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/generateElement/%/%.2/%.4/%.1">
-      <details key="start" value="597"/>
-      <details key="end" value="598"/>
-      <details key="line" value="27"/>
+    <eAnnotations source="positions.15" references="/0/generateElement/%/%.3/%.1">
+      <details key="start" value="564"/>
+      <details key="end" value="576"/>
+      <details key="line" value="28"/>
     </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/generateElement/%/%.2/%.4/%.2">
-      <details key="start" value="549"/>
-      <details key="end" value="550"/>
+    <eAnnotations source="positions.16" references="/0/generateElement/%/%.3/%.2">
+      <details key="start" value="474"/>
+      <details key="end" value="493"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/generateElement/%/%.2/%.4/%.3">
-      <details key="start" value="562"/>
-      <details key="end" value="566"/>
+    <eAnnotations source="positions.17" references="/0/generateElement/%/%.3/%.2/aChampionship">
+      <details key="start" value="474"/>
+      <details key="end" value="487"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/generateElement/%/%.2/%.5">
-      <details key="start" value="390"/>
-      <details key="end" value="408"/>
+    <eAnnotations source="positions.18" references="/0/generateElement/%/%.3/%.3">
+      <details key="start" value="505"/>
+      <details key="end" value="509"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generateElement/%/%.2/%.5/aChampionship">
-      <details key="start" value="390"/>
-      <details key="end" value="403"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generateElement/%/%.2/%.6">
-      <details key="start" value="420"/>
-      <details key="end" value="424"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/generateElement/%/%.3">
-      <details key="start" value="674"/>
-      <details key="end" value="675"/>
+    <eAnnotations source="positions.19" references="/0/generateElement/%/%.4">
+      <details key="start" value="583"/>
+      <details key="end" value="599"/>
       <details key="line" value="31"/>
     </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/generateElement/%/%.4">
+    <eAnnotations source="positions.20" references="/0/generateElement/%/%.5">
       <details key="start" value="317"/>
       <details key="end" value="335"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/generateElement/%/%.4/aChampionship">
+    <eAnnotations source="positions.21" references="/0/generateElement/%/%.5/aChampionship">
       <details key="start" value="317"/>
       <details key="end" value="330"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generateElement/%/%.5">
+    <eAnnotations source="positions.22" references="/0/generateElement/%/%.6">
       <details key="start" value="344"/>
       <details key="end" value="351"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generateElement/%.1">
+    <eAnnotations source="positions.23" references="/0/generateElement/%.1">
       <details key="start" value="142"/>
       <details key="end" value="228"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generateElement/%.1/aChampionship">
+    <eAnnotations source="positions.24" references="/0/generateElement/%.1/aChampionship">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generateElement/aChampionship">
+    <eAnnotations source="positions.25" references="/0/generateElement/aChampionship">
       <details key="start" value="262"/>
       <details key="end" value="290"/>
       <details key="line" value="12"/>
